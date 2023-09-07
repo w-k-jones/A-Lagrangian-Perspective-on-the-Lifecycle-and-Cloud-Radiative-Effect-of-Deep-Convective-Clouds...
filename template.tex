@@ -79,7 +79,6 @@
 \input{acronyms.tex}
 
 \begin{document}
-
 \title{A Lagrangian Perspective on the Lifecycle and Cloud Radiative Effect of Deep Convective Clouds Over Africa}
 
 
@@ -129,7 +128,7 @@ The anvil clouds of tropical deep convection have large radiative effects in bot
 
 To study the connection between deep convective cloud (DCC) lifecycle and CRE, we investigate the behaviour of both isolated and organised DCCs in a 4-month case study over sub-Saharan Africa (May-August 2016). Using a novel cloud tracking algorithm, we detect and track growing convective cores and their associated anvil clouds using geostationary satellite observations from Meteosat SEVIRI. Retrieved cloud properties and derived broadband radiative fluxes are provided by the CC4CL algorithm. By collecting the cloud properties of the tracked DCCs, we produce a dataset of anvil cloud properties along their lifetimes. While the majority of DCCs tracked in this dataset are isolated, with only a single core, the overall coverage of anvil clouds is dominated by those of clustered, multi-core anvils due to their larger areas and lifetimes.
 
-We find that the distribution of anvil cloud CRE of our tracked DCCs has a bimodal distribution. The interaction between the lifecycles of DCCs and the diurnal cycle of insolation results in a wide range of SW anvil CRE, while the LW component remains in a comparatively narrow range of values. The CRE of individual anvil clouds varies widely, with isolated DCCs tending to have large negative or positive CREs while larger, organised systems tend to have CRE closer to zero.  Despite this, we find that the total integrated anvil cloud CRE across all tracked DCCs is indeed neutral within our range of uncertainty (0.86\,\textpm\,0.91\,\unit{Wm\textsuperscript{-2}}). Changes in the lifecycle of DCCs, such as shifts in the time of triggering, or the length of the dissipating phase, could have large impacts on the SW anvil CRE and lead to complex responses that are not considered by theories of LW anvil CRE feedbacks.
+We find that the distribution of anvil cloud CRE of our tracked DCCs has a bimodal distribution. The interaction between the lifecycles of DCCs and the diurnal cycle of insolation results in a wide range of SW anvil CRE, while the LW component remains in a comparatively narrow range of values. The CRE of individual anvil clouds varies widely, with isolated DCCs tending to have large negative or positive CREs while larger, organised systems tend to have CRE closer to zero.  Despite this, we find that the net anvil cloud CRE across all tracked DCCs is indeed neutral within our range of uncertainty (0.86\,\textpm\,0.91\,\unit{Wm\textsuperscript{-2}}). Changes in the lifecycle of DCCs, such as shifts in the time of triggering, or the length of the dissipating phase, could have large impacts on the SW anvil CRE and lead to complex responses that are not considered by theories of LW anvil CRE feedbacks.
 
 \end{abstract}
 
@@ -138,44 +137,48 @@ We find that the distribution of anvil cloud CRE of our tracked DCCs has a bimod
 
 
 \introduction  %% \introduction[modified heading if necessary]
-\acrshort{dcc}s play a key role in the tropical atmosphere. 
+\acrfullpl{dcc} play a key role in the tropical atmosphere. 
 Forming the ascending branch of the Hadley cells near the equator, \acrshort{dcc}s are critical to the circulation and heat transfer of the tropics \citep{riehl_heat_1958, weisman_mesoscale_2015}. 
 \acrshort{dcc}s are also a cause of extreme weather events including floods, lightning and hail \citep{westra_future_2014}. 
-\acrshort{mcs}s---large, long-lived convective systems in which the anvils of multiple convective cores combine into a single, large `cloud shield' \citep{chen_diurnal_1997, houze_mesoscale_2004, roca_simple_2017}---are responsible for the majority of precipitation in the tropics \citep{tan_increases_2015}. 
+\acrfullpl{mcs}---large, long-lived convective systems in which the anvils of multiple convective cores combine into a single, large `cloud shield' \citep{chen_diurnal_1997, houze_mesoscale_2004, roca_simple_2017}---are responsible for the majority of precipitation in the tropics \citep{tan_increases_2015}. 
 Changes in the behaviour of \acrshort{dcc}s with climate change have the potential for major impacts on the atmosphere, weather and society.
 
-\acrshort{dcc}s also exert a key influence on the temperature of the tropics through their \acrshort{cre}. 
-Due to their size, height and depth, \acrshort{dcc} anvils have large radiative effects in both the \acrshort{sw} and \acrshort{lw}, with both having average magnitudes in excess of 100\,\unit{W m^{-2}} \citep{hartmann_tropical_2016, wall_balanced_2018}. 
+\acrshort{dcc}s also exert a key influence on the temperature of the tropics through their \acrfull{cre}. 
+Due to their size, height and depth, \acrshort{dcc} anvils have large radiative effects in both the \acrfull{sw} and \acrfull{lw}, with both having average magnitudes in excess of 100\,\unit{W m^{-2}} \citep{hartmann_tropical_2016, wall_balanced_2018}. 
 However, due to the opposite signs of these two components, the average anvil \acrshort{cre} in the tropics is approximately zero \citep{ramanathan_cloudradiative_1989, hartmann_effect_1992, stephens_cloudsat_2018}. 
 Radiation is also key to the lifecycle of \acrshort{dcc}s. 
 Over land, convection is typically initiated by the heating of the surface and lower troposphere by solar \acrshort{sw} radiation, resulting in a peak of convective activity in the late afternoon. 
 Over the ocean, however, convection is often triggered by \acrshort{lw} cooling of the upper troposphere, and so convective activity occurs more frequently in the morning. 
 However, the occurrence of convection is more uniform throughout the diurnal cycle compared to that over land \citep{taylor_evaluating_2017}. 
 Radiation also has an impact on \acrshort{dcc} lifecycle through the differential heating of the anvil cloud, which destabilises the anvil cloud leading to dissipation due to entrainment and evaporation. 
-However, \acrshort{sw} heating of the anvil cloud top during daytime acts to stabilise and delay this process, leading to differences in anvil lifetime depending on the diurnal cycle \citep{sokol_tropical_2020}.
+However, \acrshort{sw} heating of the anvil cloud top during daytime acts to stabilise and delay this process, leading to differences in anvil lifetime depending on the diurnal cycle \citep{harrop_role_2016, sokol_tropical_2020, wall_observational_2020}.
 
 There are a number of hypotheses regarding the \acrshort{cre} of tropical anvil clouds that consider whether the neutral \acrshort{cre} of tropical anvils is the result of a feedback mechanism. 
-The thermostat hypothesis proposes that in a warmer environment anvil clouds produce thicker cirrus which acts to cool the tropics through increased \acrshort{sw} reflectance \citep{ramanathan_thermodynamic_1991}. 
-The Iris hypothesis proposes an alternate negative feedback mechanism in which anvil clouds reduce in area in response to warming surface temperature (due to an increase in precipitation efficiency), resulting in greater \acrshort{lw} emission from the surrounding clear regions \citep{lindzen_does_2001}, however support for this effect is disputed \citep{genio_climatic_2002, lin_examination_2004}. 
-On the other hand, the \acrshort{fat} hypothesis argues that the anvil \acrshort{ctt} remains constant in a warming climate due to the tendency of tropical anvil clouds to detrain at the level at which water vapour cooling becomes inefficient (around 220\,\unit{K}). This would result in a positive feedback mechanism whereby anvil clouds become higher to maintain the same \acrshort{ctt} and so have a larger \acrshort{lw} \acrshort{cre} due to the warmer surface temperatures \citep{hartmann_important_2002}. 
-While there is evidence that this is the case for the largest \acrshort{dcc} anvils, it is debated whether these observations are due to \acrshort{fat} or due to fixed tropopause temperature (FiTT) \citep{seeley_fat_2019}. 
-The \acrshort{phat} hypothesis argues instead that while anvil clouds will become higher with warming temperatures, an associated increase in static stability results in warmer anvil temperatures and a reduced \acrshort{lw} response compared to \acrshort{fat} \citep{zelinka_why_2010}. 
-This reduced response more closely matches the \acrshort{lw} response of tropical clouds in global climate models. 
-Some observations of tropical anvil clouds have instead suggested that warming of the surface invigorates convection, leading to higher and colder anvil \acrshort{ctt} and a stronger \acrshort{lw} warming response \citep{igel_cloudsat_2014}.
+\citet{ramanathan_cloudradiative_1989} proposed the thermostat hypothesis in which, in response to a warming environment, anvil clouds produce thicker cirrus which acts to cool the tropics through increased \acrshort{sw} reflectance. 
+The Iris hypothesis proposes that anvil cirrus will decrease in area, resulting in greater \acrshort{lw} emission from the surrounding clear-sky regions.
+\citet{lindzen_does_2001} first proposed this as a result of increased precipitation efficiency, however evidence for this effect is disputed \citep{genio_climatic_2002, lin_examination_2004}.
+\citet{bony_thermodynamic_2016} proposed a `stability iris' feedback, in which the established trends of increased dry static stability \citep{held_robust_2006} and a reduction in the tropical overturning circulation \citep{vecchi_global_2007} reduce the detrainment of anvil cirrus.
+Although the anvil cloud response is generally considered to be a negative climate feedback, the predicted magnitude varies widely and it represents the greatest uncertainty among all cloud feedbacks \citep{sherwood_assessment_2020}.
 
-These hypotheses however only consider changes in anvil properties such as area, reflectance and temperature, and \acrshort{fat} and \acrshort{phat} only consider the \acrshort{lw} feedback. 
-Changes to the lifecycle and diurnal cycle of deep convection may also be an important factor, in particular when considering the \acrshort{sw} feedback. 
-Deep convection over land may be perturbed in particular by factors which influence \acrshort{sw} fluxes, such as aerosols. 
-Observations have shown that the increase in tropical precipitation can be attributed to an increase in the frequency of deep convection, rather than an intensification of individual \acrshort{dcc}s \citep{tan_increases_2015}.
+On the other hand, the \acrfull{fat} hypothesis argues that the anvil \acrfull{ctt} remains constant in a warming climate, and the greater difference between anvil and surface temperature results in a positive \acrshort{lw} feedback \citep{hartmann_important_2002}.
+The basis for \acrshort{fat} is that \acrshort{lw} cooling of the troposphere due to water vapour becomes inefficient below 220\,\unit{K} \citep{jeevanjee_simple_2020}, which, if relative humidity remains constant, fixes the top of the convectively active troposphere at this isotherm. 
+While there is evidence that this is the case for the largest \acrshort{dcc} anvils, the increase in static stability may result in a reduced positive feedback due to a `proportionally higher' anvil temperature \citep{zelinka_why_2010} which more closely matches the \acrshort{lw} response of tropical clouds in global climate models.
+While satellite observations have shown a trend in anvil cloud height \citep{norris_evidence_2016}, there is not yet sufficient evidence to distinguish this from inter-annual variability \citep{takahashi_when_2019}.
+\citet{seeley_fat_2019} argued that, while the \acrshort{fat} hypothesis makes a strong case for a fixed inversion temperature, this does not necessarily correspond to the anvil detrainment height \citep{takahashi_level_2017, wang_observational_2020}, and so anvil temperature may not remain fixed.
 
-In this article, we investigate how the lifecycle of deep convection impacts the \acrshort{cre} of anvil clouds. 
-\citet{nowicki_observations_2004} used estimates of \acrshort{toa} \acrshort{lw} and \acrshort{sw} radiative fluxes from \acrshort{seviri} observations to estimate the diurnal cycle of anvil \acrshort{cre} over equatorial Africa and the equatorial Atlantic. 
+While the iris and \acrshort{fat} feedbacks may act to cancel each other out, and hence maintain the neutral \acrshort{cre} of tropical anvil clouds, there are other potential feedback mechanisms that may influence this balance.
+\citet{hill_climate_2023} showed recently that climate models underestimate dynamically driven cloud feedbacks.
+Furthermore, convective instability is expected to scale with temperature in the same manner as the Clausius-Clapeyron relation \citep{seeley_why_2015, agard_clausius_2017}, and some observations of tropical anvil clouds have instead suggested that warming of the surface invigorates convection \citep{igel_cloudsat_2014}.
+This invigoration effect may result in colder anvil \acrshort{ctt}, and hence a stronger warming feedback.
+
+Changes to the lifecycle and diurnal cycle of deep convection may also be an important factor, particularly when considering the \acrshort{sw} feedback. 
+\citet{nowicki_observations_2004} used estimates of \acrfull{toa} \acrshort{lw} and \acrshort{sw} radiative fluxes from \acrfull{seviri} observations to estimate the diurnal cycle of anvil \acrshort{cre} over equatorial Africa and the equatorial Atlantic. 
 They found that shifting the diurnal cycle of deep convection in these regions could change the \acrshort{cre} by \textpm 10\,\unit{Wm\textsuperscript{-2}}, but did not track the properties of individual \acrshort{dcc}s.
 \citet{bouniol_macrophysical_2016} compared \acrshort{cre} and cloud radiative heating rates to anvil cloud properties to investigate how radiative heating affects the anvil cloud evolution.
 These observations were made with polar orbiting instruments however, and they highlighted the need for geostationary observations to characterise the evolution of individual anvil clouds.
 Subsequent research used \acrshort{dcc} tracking methods to better characterise the lifecycle of observed anvil clouds \citep{bouniol_life_2021}, but as the radiative flux data was provided by polar-orbiting satellites the \acrshort{cre} could not be measured over the lifetime of the \acrshort{dcc}.
 
-Here, we use a novel cloud tracking methodology in conjunction with derived all-sky and clear-sky radiative fluxes to characterise the \acrshort{cre} over the lifecycles of individual anvil clouds. 
+In this article, we use a novel cloud tracking methodology in conjunction with derived all-sky and clear-sky radiative fluxes to characterise the \acrshort{cre} over the lifecycles of individual anvil clouds. 
 This methodology is applied to 4 months of data produced for the \acrshort{esa} Cloud-\acrshort{cci}+ project over sub-Saharan Africa. 
 This dataset allows us to investigate both the \acrshort{cre} of individual \acrshort{cre}s, as well as the net anvil \acrshort{cre} over the entire region. 
 We find that the overall distribution of anvil \acrshort{cre} is determined by the relationship between \acrshort{dcc} lifecycle and the diurnal cycle of the \acrshort{sw} \acrshort{cre}, and discuss the implications of this for the response of \acrshort{dcc}s to a changing climate.
@@ -184,12 +187,12 @@ We find that the overall distribution of anvil \acrshort{cre} is determined by t
 
 \section{Data}
 
-For this case study, we used data from \acrshort{seviri} \citep{aminou_msg_2002} aboard the \acrshort{msg} Meteosat-11 satellite, which is in a geostationary orbit above the equator at 0\textdegree W. 
+For this case study, we used data from \acrshort{seviri} \citep{aminou_msg_2002} aboard the \acrlong{msg} Meteosat-11 satellite, which is in a geostationary orbit above the equator at 0\textdegree W. 
 We use data from 4 months (May--August 2016) over sub-Saharan Africa (approximately 18\,\textdegree W--46\,\textdegree E, 31\,\textdegree S--15\,\textdegree N) at the full resolution of \acrshort{seviri} (3\,\unit{km} at nadir) as well as retrieved cloud properties and derived broadband fluxes produced by the \acrshort{esa} Cloud-\acrshort{cci}+ project.
-\acrshort{bt} from \acrshort{seviri} is used by the tracking algorithm, and reflectances and \acrshort{bt} are used by the cloud retrieval.
+\acrfull{bt} from \acrshort{seviri} is used by the tracking algorithm, and reflectances and \acrshort{bt} are used by the cloud retrieval.
 
-\acrshort{seviri} is a visible and \acrshort{ir} radiometer with a nadir spatial resolution of 3\,\unit{km} and a temporal sampling time of 15 minutes for the full earth disc. 
-\acrshort{seviri} has 12 channels across the visible, \acrshort{nir} and thermal-IR spectrum, with one being a high-resolution visible channel with a nadir resolution of 1\,\unit{km}. 
+\acrshort{seviri} is a visible and \acrlong{ir} radiometer with a nadir spatial resolution of 3\,\unit{km} and a temporal sampling time of 15 minutes for the full earth disc. 
+\acrshort{seviri} has 12 channels across the visible, \acrfull{nir} and thermal-IR spectrum, with one being a high-resolution visible channel with a nadir resolution of 1\,\unit{km}. 
 A brief overview of these channels, along with which are used for tracking \acrshort{dcc}s and the cloud properties retrieval, is provided in table~\ref{table:seviri_channels}.
 
 
@@ -205,7 +208,7 @@ Channel & Wavelength (\unit{\mu m}) & Description & Tracking & Retrieval\tabular
 2 & 0.81 & \acrshort{nir} & & \checkmark\tabularnewline
 3 & 1.64 & \acrshort{nir} & & \checkmark\tabularnewline
 4 & 3.92 & \acrshort{nir} Window & & \checkmark\tabularnewline
-5 & 6.25 & Upper troposphere \acrshort{wv} & \checkmark & \checkmark\tabularnewline
+5 & 6.25 & Upper troposphere \acrfull{wv} & \checkmark & \checkmark\tabularnewline
 6 & 7.35 & Lower troposphere \acrshort{wv} & \checkmark & \checkmark\tabularnewline
 7 & 8.70 & Mid-IR window & &\tabularnewline
 8 & 9.66 & Ozone & &\tabularnewline
@@ -235,13 +238,13 @@ Channel & Wavelength (\unit{\mu m}) & Description & Tracking & Retrieval\tabular
 %
 
 An example of observations from \acrshort{seviri} is shown in fig.~\ref{fig:seviri_obs_example} for 15:00:00~\acrshort{utc} on 1\textsuperscript{st} June 2016. 
-A visible composite (fig.~\ref{fig:seviri_obs_example}\,a) is constructed using the 1.64\,\unit{\mu m} and 0.81\,\unit{\mu m} near-infrared and 0.64\,\unit{\mu m} visible channels for the \acrshort{rgb} channels respectively. 
+A visible composite (fig.~\ref{fig:seviri_obs_example}\,a) is constructed using the 1.64\,\unit{\mu m} and 0.81\,\unit{\mu m} near-infrared and 0.64\,\unit{\mu m} visible channels for the \acrfull{rgb} channels respectively. 
 In this composite, ice clouds -- which appear cyan -- can be seen over central Africa and the southern Atlantic. fig.~\ref{fig:seviri_obs_example}\,b shows the 10.8\,\unit{\mu m} brightness temperature for the same scene, showing the coldest temperatures for the high ice clouds over central Africa. 
 Two combinations of channels are used for the detection of anvil clouds. 
-The \acrshort{wvd}, shown in fig.~\ref{fig:seviri_obs_example}\,c, consists of the 6.3\,\unit{\mu m} \acrshort{bt} minus the 7.4\,\unit{\mu m} \acrshort{bt}. 
+The \acrfull{wvd}, shown in fig.~\ref{fig:seviri_obs_example}\,c, consists of the 6.3\,\unit{\mu m} \acrshort{bt} minus the 7.4\,\unit{\mu m} \acrshort{bt}. 
 In clear skies the \acrshort{wvd} is negative, with values around --\,20 to --\,15 K, due to the higher, and thus colder, emission height of the 6.3\,\unit{\mu m} channel. 
 In high, thick clouds, however, the temperatures of the 6.3 and 7.4\,\unit{\mu m} channels converge and so the \acrshort{wvd} becomes closer to 0. 
-In the cases of the highest clouds, the \acrshort{wvd} can become positive due to emission from stratospheric WV in the 6.3\,\unit{\mu m} channel. The \acrshort{swd}, shown in fig.~\ref{fig:seviri_obs_example}\,d, consists of the 10.8\,\unit{\mu m} \acrshort{bt} channel minus the 12.0\,\unit{\mu m} channel. 
+In the cases of the highest clouds, the \acrshort{wvd} can become positive due to emission from stratospheric WV in the 6.3\,\unit{\mu m} channel. The \acrfull{swd}, shown in fig.~\ref{fig:seviri_obs_example}\,d, consists of the 10.8\,\unit{\mu m} \acrshort{bt} channel minus the 12.0\,\unit{\mu m} channel. 
 While the \acrshort{swd} is sensitive to near-surface WV due to absorption in the 12.0\,\unit{\mu m} channel, it is also sensitive to thin ice clouds due to the difference in emissivity of ice particles between the two channels. 
 While for thick clouds the \acrshort{swd} will be 0 K, for thin ice clouds the lower emission height of the 10.8\,\unit{\mu m} \acrshort{bt} channel results in a positive value of 5 K.
 The 10.8\,\unit{\mu m} and 12.0\,\unit{\mu m} channels of \acrshort{seviri} have relatively wide wavebands and as such are less sensitive to the presence of thin ice clouds.
@@ -253,15 +256,15 @@ As a result, we found that the detection of thin anvil is unreliable using this 
     \caption[
     Example observations from the Meteosat \acrshort{seviri} instrument at 15:00:00 \acrshort{utc} on 2016/6/01
     ]{
-    Example observations from the Meteosat \acrshort{seviri} instrument at 15:00:00 \acrshort{utc} on 2016/6/01. a: A visible composite formed using the 1.6, 0.81 and 0.64\,\unit{\mu m} channels as the \acrshort{rgb} channels respectively, with 10.8\,\unit{\mu m} \acrshort{bt} during the night-time. The scene shows a cluster of cold cloud tops (cyan) over central Africa and over the Southern Atlantic. b: 10.8\,\unit{\mu m} \acrshort{bt}. c: \acrshort{wvd} formed by the 6.3\,\unit{\mu m} channel minus the 7.4\,\unit{\mu m} channel. d: \acrshort{swd} formed by the 10.8\,\unit{\mu m} channel minus the twelve\,\unit{\mu m} channel.
+    Example observations from the Meteosat \acrshort{seviri} instrument at 15:00:00 \acrshort{utc} on 2016/6/01. a: A visible composite formed using the 1.6, 0.81 and 0.64\,\unit{\mu m} channels as the \acrshort{rgb} channels respectively, with 10.8\,\unit{\mu m} \acrshort{bt} during the night-time. The scene shows a cluster of cold cloud tops (cyan) over central Africa and over the Southern Atlantic. b: 10.8\,\unit{\mu m} \acrshort{bt}. c: \acrshort{wvd} formed by the 6.3\,\unit{\mu m} channel minus the 7.4\,\unit{\mu m} channel. d: \acrshort{swd} formed by the 10.8\,\unit{\mu m} channel minus the 12.0\,\unit{\mu m} channel.
     }
     \label{fig:seviri_obs_example}
 \end{figure*}
 
 
-Retrieved cloud properties -- including optical thickness, effective radius, liquid/ice water path, \acrshort{ctt} and height -- are provided by the \acrshort{cc4cl} algorithm \citep{sus_community_2018, mcgarragh_community_2018}. 
-These properties are all retrieved at the same resolution as the input \acrshort{seviri} data. Broadband fluxes are derived using the BUGSRad radiative transfer model \citep{stephens_parameterization_2001} using input cloud properties from the CC4CL retrieval and vertical temperature, moisture and trace gas profiles from ERA-5 \citep{hersbach_era5_2020}. 
-The BUGSRad model provides \acrshort{toa} and \acrshort{boa} \acrshort{lw} and \acrshort{sw} radiative fluxes for both all-sky and clear-sky conditions. An example of these derived fluxes is shown in fig.~\ref{fig:seviri_flux_example}. 
+Retrieved cloud properties -- including optical thickness, effective radius, liquid/ice water path, \acrshort{ctt} and height -- are provided by the \acrfull{cc4cl} algorithm \citep{sus_community_2018, mcgarragh_community_2018}. 
+These properties are all retrieved at the same resolution as the input \acrshort{seviri} data. Broadband fluxes are derived using the BUGSRad radiative transfer model \citep{stephens_parameterization_2001} using input cloud properties from the \acrshort{cc4cl} retrieval and vertical temperature, moisture and trace gas profiles from ERA-5 \citep{hersbach_era5_2020}. 
+The BUGSRad model provides \acrshort{toa} and \acrlong{boa} \acrshort{lw} and \acrshort{sw} radiative fluxes for both all-sky and clear-sky conditions. An example of these derived fluxes is shown in fig.~\ref{fig:seviri_flux_example}. 
 Figure~\ref{fig:seviri_flux_example}\,a shows net \acrshort{toa} fluxes, with a net warming during the daytime on the Western side of the image, and a net cooling at night-time on the Eastern side. 
 Figure~\ref{fig:seviri_flux_example}\,b shows the net \acrshort{toa} \acrshort{cre}, with a net cooling effect during the daytime and warming during the night-time for observed high clouds over central Africa. The \acrshort{sw} (fig.~\ref{fig:seviri_flux_example}\,c) and \acrshort{lw} (fig.~\ref{fig:seviri_flux_example}\,d) components of the \acrshort{cre} show that while the \acrshort{lw},
 warming component has a smaller magnitude than the day-time, cooling \acrshort{sw} \acrshort{cre}, it remains constant during both day- and night-time.
@@ -279,7 +282,7 @@ warming component has a smaller magnitude than the day-time, cooling \acrshort{s
 \end{figure*}
 
 
-Validation of the \acrshort{seviri} broadband fluxes was performed against monthly-mean observations of \acrshort{toa} broadband \acrshort{cre} from the \acrshort{ceres} \citep{loeb_clouds_2018} \acrshort{ebaf} climate data record. 
+Validation of the \acrshort{seviri} broadband fluxes was performed against monthly-mean observations of \acrshort{toa} broadband \acrshort{cre} from the \acrfull{ceres} \citep{loeb_clouds_2018} \acrfull{ebaf} climate data record. 
 The results of this validation are shown in fig.~\ref{fig:flux_validation}. 
 Monthly mean fluxes were calculated for \acrshort{seviri} by first calculating the mean daily fluxes over each 1\texttimes 1\textdegree grid square for days in which we have over 23 hours of observations, and then averaging these daily means over each month. 
 Comparison of the net \acrshort{toa} \acrshort{cre} to \acrshort{ceres} revealed a bias of --\,3.67\,\unit{W m\textsuperscript{-2}} (fig.~\ref{fig:flux_validation}\,a,b), consisting of a \acrshort{sw} bias of --\,3.04\,\unit{W m^{-2}} (fig.~\ref{fig:flux_validation}\,c,d) and a \acrshort{lw} bias of --\,0.63\,\unit{W m\textsuperscript{-2}} (Fig~\ref{fig:flux_validation}\,e,f). 
@@ -350,7 +353,7 @@ The resulting dataset allows us to analyse the properties of each \acrshort{dcc}
 
 Figure~\ref{fig:seviri_map_dists}\,a shows the frequency of core detections for each 1\texttimes 1\textdegree grid square over the period of the case study. 
 The majority of observed convection occurs over the tropical rainforest regions. 
-During the months of May-August, the \acrshort{itcz} is at its northernmost extent over Africa \citep{nicholson_itcz_2018}. 
+During the months of May-August, the \acrfull{itcz} is at its northernmost extent over Africa \citep{nicholson_itcz_2018}. 
 The West African monsoon occurs during these months, with the primary band of convection located between 5-15\textdegree N \citep{nicholson_revised_2009}, which our observations agree with. 
 We observed the maximum frequency of convection at around 6\textdegree N, 12\textdegree E over the Western High Plateau of Cameroon, with high frequencies of convection also observed over the Nigerian coastal plains to the West and the Jos Plateau in Northern Nigeria. 
 High rates of convection are also observed over the coastal plains and inland highlands of Guinea, Sierra Leone and Liberia (5--12\,\textdegree N, 5--15\,\textdegree W)
@@ -378,7 +381,7 @@ There is also a noticeable lake effect on the time of convection occurring over 
 When we compare the regions of Cameroon and Nigeria (4--10\textdegree N, 6--14\textdegree E), where we detect the most cores in fig.~\ref{fig:seviri_map_dists}\,a, with the average time of detection in fig.~\ref{fig:seviri_map_dists}\,b, we see that the grid squares with more cores also tend to have an earlier average time of detection than the surrounding grid squares. 
 Precipitation over the Nigerian plains and the Jos Plateau is linked to South-westerly winds bringing moist, warm air from the Gulf of Guinea \citep{vondou_seasonal_2010}. 
 This warm air may then trigger convection both through the sea breeze effect and orographic lifting when it reaches the highlands, explaining both the higher frequency and earlier timing of convection compared to surrounding regions. 
-A similar relationship between the high frequency of convection and earlier time of detection is also seen over the Guinea/Sierra Leone/Liberia region (5--12\textdegree N, 5--15\textdegree W), and may be due to the same mechanism.
+A similar relationship between the high frequency of convection and earlier time of detection is also seen over the coastal region and adjacent highlands of Guinea, Sierra Leone and Liberia (5--12\textdegree N, 5--15\textdegree W) which may be due to the same mechanism.
 
 It should be noted that due to the method of detection, cores that develop under existing anvils are less likely to be detected than those in clear sky regions. 
 As a result, we may underestimate the occurrence of later occurring cores, particularly in regions such as the Northern Sahel where a second, night-time peak of precipitation has been observed.
@@ -416,8 +419,8 @@ Despite their high frequency, isolated \acrshort{dcc}s only account for 12\% of 
 Previous studies have found that despite being few in number, \acrshort{mcs}s account for the majority of precipitation in Western Africa \citep{vizy_understanding_2019}.
 
 Figure~\ref{fig:seviri_anvil_ctt_stats}\,a shows the average mean \acrshort{ctt}, and fig.~\ref{fig:seviri_anvil_ctt_stats}\,b the average minimum \acrshort{ctt} for anvils with different numbers of cores. 
-While the more clustered anvils have colder average anvil \acrshort{ctt}, this decrease plateaus around 220K. 
-However, the absolute minimum observed \acrshort{ctt} within each anvil shows a much greater difference with an increasing number of cores. 
+While the more clustered anvils have colder average anvil \acrshort{ctt}, this decrease plateaus below 220K indicating that the reduction in clear-sky cooling below this temperature may cap the anvil \acrshort{ctt} for larger \acrshort{dcc}s. 
+The minimum observed \acrshort{ctt} within each anvil, however, are colder and show a greater difference with an increasing number of cores. 
 The most clustered anvils tend to have a minimum \acrshort{ctt} of around 180\,\unit{K}, indicating the presence of overshooting tops and the most intense convection. 
 Care should be taken when interpreting such low retrieved \acrshort{ctt} values due to the large uncertainty associated with sensor noise at these cold temperatures.
 
@@ -471,7 +474,7 @@ There is a clear trend that, as the number of cores increases, the proportion of
 \subsection{Anvil \acrshort{cre}}
 
 Using the broadband fluxes data in conjunction with the tracked \acrshort{dcc} dataset, we are able to track how the \acrshort{sw}, \acrshort{lw} and net \acrshort{cre} evolve over the lifetime of each tracked anvil. 
-Figure~\ref{fig:cre_lifecycle_examples} shows the time series of \acrshort{sw}, \acrshort{lw} and net \acrshort{cre} as well as the cumulative average \acrshort{cre} for a number of different cases of anvil lifecycles. 
+Figure~\ref{fig:cre_lifecycle_examples} shows the time series of \acrshort{sw}, \acrshort{lw} and net \acrshort{cre} as well as the cumulative average \acrshort{cre} (the average of net \acrshort{cre}over anvil area and lifetime up until that time) for a number of different cases of anvil lifecycles. 
 Note that all fluxes are \acrshort{toa} and measured in the downward direction, so a positive value represents warming and a negative value represents cooling.
 
 
@@ -479,9 +482,9 @@ Note that all fluxes are \acrshort{toa} and measured in the downward direction, 
     \centering
     \includegraphics[width=12cm]{figures/ch3_10.png}
     \caption[
-    Anvil net, \acrshort{lw}, and \acrshort{sw} \acrshort{cre}, accumulated mean \acrshort{cre} over anvil lifetime
+    Anvil net, \acrshort{lw}, and \acrshort{sw} \acrshort{cre}, cumulative mean \acrshort{cre} over anvil lifetime
     ]{
-    Anvil net, \acrshort{lw}, and \acrshort{sw} \acrshort{cre}, accumulated mean \acrshort{cre} over anvil lifetime and anvil area for a.: an isolated, short-lived (4-hour) \acrshort{dcc}; b.: a moderately clustered, 1-day long \acrshort{dcc}; and c.: a large, clustered, 4-day long \acrshort{dcc}. All times are the local solar time, to the nearest 5-minute interval
+    Anvil net, \acrshort{lw}, and \acrshort{sw} \acrshort{cre}, cumulative mean \acrshort{cre} over anvil lifetime and anvil area for a.: an isolated, short-lived (4-hour) \acrshort{dcc}; b.: a moderately clustered, 1-day long \acrshort{dcc}; and c.: a large, clustered, 4-day long \acrshort{dcc}. All times are the local solar time, to the nearest 5-minute interval
     }
     \label{fig:cre_lifecycle_examples}
 \end{figure*}
@@ -494,7 +497,7 @@ While this period of warming moves the cumulative average \acrshort{cre} towards
 
 Figure~\ref{fig:cre_lifecycle_examples}\,b shows the case of a longer-lived (22 hours), clustered \acrshort{dcc}. 
 It initiates in the morning, and so the \acrshort{sw} cooling dominates for the first half of the anvil lifetime. 
-Compared to the isolated \acrshort{dcc}, it exists for much longer during the night time, and so the accumulated average becomes positive over the full lifetime of the anvil cloud.
+Compared to the isolated \acrshort{dcc}, it exists for much longer during the night time, and so the cumulative average becomes positive over the full lifetime of the anvil cloud.
 
 Figure~\ref{fig:cre_lifecycle_examples}\,c shows the case of a four-day, highly clustered convective event. 
 In this case, we see the net \acrshort{cre} alternates between warming and cooling throughout the diurnal cycle. 
@@ -502,7 +505,8 @@ The cumulative \acrshort{cre} also alternates between overall warming and coolin
 
 We see in both the longer-lived cases (fig.~\ref{fig:cre_lifecycle_examples}\,b, c) that the \acrshort{lw} \acrshort{cre} reduces towards the end of the anvil cloud lifetime. 
 This may be reflective of the findings from fig.~\ref{fig:seviri_lifetime_dists} that the minimum average \acrshort{ctt} occurs before the mid-point of the cloud lifecycle for longer-lived systems. 
-In addition, the accumulated radiative cooling of the anvil top may drive subsidence and reduce the cloud-top height of the anvil over time \citep{sokol_tropical_2020}
+This reduction in \acrshort{lw} \acrshort{cre} may be due to a thinning of the anvil cloud (allowing increased \acrshort{lw} emission from the surface), or due to heating and stabilisation of the upper troposphere by the \acrshort{dcc}.
+In addition, the cumulative radiative cooling of the anvil top may drive subsidence and reduce the cloud-top height of the anvil over time \citep{sokol_tropical_2020}
 
 Figure~\ref{fig:anvil_cre_dist} shows the distribution of net lifetime \acrshort{cre} for all tracked anvils. 
 The overall negative average value of --\,8.17\,\textpm\,0.85\,\unit{W m^{-2}} is approximately zero when considering the negative bias in the broadband flux dataset. 
@@ -517,7 +521,7 @@ The centre of the distribution---with average \acrshort{cre}s close to zero---sh
     \caption[
     The distribution of lifetime anvil \acrshort{cre} for all observed anvils
     ]{
-    The distribution of lifetime anvil \acrshort{cre} for all observed anvils. The mean number of cores per anvil in each bin is indicated by the colour scale. The vertical dashed line shows the integrated mean \acrshort{cre} over all anvils, weighted by the anvil areas (0.86\,\textpm\,0.91\,\unit{W m^{-2}}).
+    The distribution of lifetime anvil \acrshort{cre} for all observed anvils. The mean number of cores per anvil in each bin is indicated by the colour scale. The vertical dashed line shows the integrated mean \acrshort{cre} (over area and lifetime) over all anvils, weighted by the anvil areas (0.86\,\textpm\,0.91\,\unit{W m^{-2}}).
     }
     \label{fig:anvil_cre_dist}
 \end{figure*}
@@ -585,16 +589,17 @@ The interaction between the diurnal cycle of convection and \acrshort{dcc} lifet
 As the \acrshort{lw} \acrshort{cre} is normally distributed, a response to changing cloud top height or temperature may occur as a shift in the distribution. 
 However, the bimodal distribution of the \acrshort{sw} \acrshort{cre} must result in more complex adjustments to shift the overall mean. 
 As the position of the peak at 0 \,\unit{W m^{-2}} relating to night-time \acrshort{dcc}s is fixed, to change the overall average \acrshort{sw} \acrshort{cre} either the width of the distribution has to increase or decrease, or the number of \acrshort{dcc}s occurring during the day- or night-time has to increase. 
-The former has important implications for the diurnal cycle of temperature in the tropics, and the latter for the diurnal cycle of convection.
+The former has important implications for the diurnal cycle of temperature in the tropics, and the latter for the diurnal cycle of convection, which, in turn, affects the anvil lifecycle.
 
-This highlights topics of interest for future research. 
+There are, however, a number of limitations in this study which present opportunities for future research. 
 Firstly, as this study only involved 4 months of data during the Northern Hemisphere summer, we were not able to investigate the impact of the seasonal cycle on the behaviour of \acrshort{dcc}s and their \acrshort{cre}. 
-Extending this research to a full year of data over a larger domain would allow investigation of seasonal and regional differences, in particular also over the oceans. 
-Secondly, an investigation of atmospheric heating effects from \acrshort{dcc}s. \acrshort{sw} and \acrshort{lw} fluxes have notably different effects on atmospheric heating, and so although the \acrshort{toa} flux may be in balance for tropical \acrshort{dcc}s, changes in the \acrshort{lw} or \acrshort{sw} \acrshort{cre} may have resulted in different heating profiles and diurnal cycles. 
-In particular, anvil heating by \acrshort{lw} and \acrshort{sw} is important to anvil lifetime and dependent on the diurnal cycle \citep{harrop_role_2016, sokol_tropical_2020}, and so gaining a better understanding of this may aid in understanding the lifecycle of both isolated and clustered convection in the tropics. 
-Finally, investigating the response of \acrshort{dcc} \acrshort{cre} to perturbations of the diurnal cycle of deep convection. 
-Anthropogenic effects such as biomass burning aerosol radiative effect and land use change may change the diurnal cycle of deep convection over land, and as shown this may have a large influence on the \acrshort{toa} \acrshort{cre}. 
-Understanding how the \acrshort{cre} of deep convection responds to changes in the diurnal cycle may be key to understanding future changes in deep convection in the tropics.
+Furthermore, extending to a larger domain would allow investigation of regional differences, in particular the important land--sea contrast of deep convection \citep{takahashi_revisiting_2023}. 
+A major limitation of the \acrshort{seviri} data is its poor sensitivity to thin anvil cirrus, which has an important impact on net anvil \acrshort{cre} \citep{protopapadaki_upper_2017, horner_evolution_2022}.
+The flexible combined imager \citep{martin_fci_2021} aboard the third-generation Meteosat may allow better detection and study of thin anvil cirrus over tropical Africa in the near future.
+
+Cloud tracking provides a key capability for the study of deep convective anvil clouds \citep{gasparini_opinion_2023}.
+The ability to observe changes over the lifetime of an anvil cloud independently of changes in the microphysical or macrophysical properties of \acrshort{dcc}s.
+Further application of cloud tracking approaches may better our understanding of \acrshort{dcc} lifecycle, its relation to the diurnal cycle of radiation, and its response to a changing climate.
 
 
 
@@ -607,7 +612,14 @@ Understanding how the \acrshort{cre} of deep convection responds to changes in t
 % \dataavailability{TEXT} %% use this section when having only data sets available
 
 
-\codedataavailability{TEXT} %% use this section when having data sets and software code available
+\codedataavailability{
+The CC4CL cloud retrieval algorithm is available for use with the GPL v3.0 licence and can be accessed through the following github repository: \url{https://github.com/ORAC-CC/orac}.
+The tobac-flow DCC detection and tracking algorithm is available under the BSD 3-clause licence.
+Version 1.7.6, which was utilised for this study, is archived at the following repository: \url{https://zenodo.org/record/8317062} \citep{jones_tobacflow_2023}.
+
+The Meteosat SEVIRI level 1.5 data used in this study is openly available via the EUMETSAT data store.
+The dataset of tracked DCCs and their properties produced and analysed in this study is available at the following repository: \url{https://zenodo.org/record/8317025} \citep{jones_cloudcci_2023}.
+} %% use this section when having data sets and software code available
 
 
 % \sampleavailability{TEXT} %% use this section when having geoscientific samples available
@@ -640,7 +652,7 @@ Understanding how the \acrshort{cre} of deep convection responds to changes in t
 
 
 
-\authorcontribution{WKJ designed the study. MS produced the dataset of retrieved cloud properties and radiative fluxes. WKJ performed the detection and tracking and analysis of the datset. WKJ wrote this article with contributions from MS and PS.} %% this section is mandatory
+\authorcontribution{WKJ designed the study. MS produced the dataset of retrieved cloud properties and radiative fluxes. WKJ performed the detection and tracking and the data analysis. WKJ wrote this article with contributions from MS and PS.} %% this section is mandatory
 
 \competinginterests{The authors declare that they have no competing interests.} %% this section is mandatory even if you declare that no competing interests are present
 
