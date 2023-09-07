@@ -124,7 +124,7 @@
 
 
 \begin{abstract}
-The anvil clouds of tropical deep convection have large radiative effects in both the shortwave (SW) and longwave (LW) spectra with the average magnitudes of both over 100\,\unit{Wm\textsuperscript{-2}}. Despite this, due to the opposite sign of these fluxes the net average of anvil cloud radiative effect (CRE) over the tropics is found to be neutral. Research into the response of anvil CRE to climate change has primarily focused on the feedbacks of anvil cloud height and anvil cloud area, in particular regarding the LW feedback. However, tropical deep convection over land has a strong diurnal cycle which may couple with the shortwave component of anvil cloud radiative effect. As this diurnal cycle is poorly represented in climate models it is vital to gain a better understanding of how its changes impact anvil CRE.
+The anvil clouds of tropical deep convection have large radiative effects in both the shortwave (SW) and longwave (LW) spectra with the average magnitudes of both over 100\,\unit{Wm\textsuperscript{-2}}. Despite this, due to the opposite sign of these fluxes, the net average of anvil cloud radiative effect (CRE) over the tropics has been found to be neutral. Research into the response of anvil CRE to climate change has primarily focused on the feedbacks of anvil cloud height and anvil cloud area, in particular regarding the LW feedback. However, tropical deep convection over land has a strong diurnal cycle which may couple with the shortwave component of anvil cloud radiative effect. As this diurnal cycle is poorly represented in climate models it is vital to gain a better understanding of how its changes impact anvil CRE.
 
 To study the connection between deep convective cloud (DCC) lifecycle and CRE, we investigate the behaviour of both isolated and organised DCCs in a 4-month case study over sub-Saharan Africa (May-August 2016). Using a novel cloud tracking algorithm, we detect and track growing convective cores and their associated anvil clouds using geostationary satellite observations from Meteosat SEVIRI. Retrieved cloud properties and derived broadband radiative fluxes are provided by the CC4CL algorithm. By collecting the cloud properties of the tracked DCCs, we produce a dataset of anvil cloud properties along their lifetimes. While the majority of DCCs tracked in this dataset are isolated, with only a single core, the overall coverage of anvil clouds is dominated by those of clustered, multi-core anvils due to their larger areas and lifetimes.
 
@@ -140,7 +140,7 @@ We find that the distribution of anvil cloud CRE of our tracked DCCs has a bimod
 \acrfullpl{dcc} play a key role in the tropical atmosphere. 
 Forming the ascending branch of the Hadley cells near the equator, \acrshort{dcc}s are critical to the circulation and heat transfer of the tropics \citep{riehl_heat_1958, weisman_mesoscale_2015}. 
 \acrshort{dcc}s are also a cause of extreme weather events including floods, lightning and hail \citep{westra_future_2014}. 
-\acrfullpl{mcs}---large, long-lived convective systems in which the anvils of multiple convective cores combine into a single, large `cloud shield' \citep{chen_diurnal_1997, houze_mesoscale_2004, roca_simple_2017}---are responsible for the majority of precipitation in the tropics \citep{tan_increases_2015}. 
+\acrfullpl{mcs}---large, long-lived convective systems in which the anvils of multiple convective cores combine into a single, large `cloud shield' \citep{chen_diurnal_1997, houze_mesoscale_2004, roca_simple_2017}---are responsible for the majority of precipitation in the tropics \citep{feng_global_2021}. 
 Changes in the behaviour of \acrshort{dcc}s with climate change have the potential for major impacts on the atmosphere, weather and society.
 
 \acrshort{dcc}s also exert a key influence on the temperature of the tropics through their \acrfull{cre}. 
@@ -239,7 +239,7 @@ Channel & Wavelength (\unit{\mu m}) & Description & Tracking & Retrieval\tabular
 
 An example of observations from \acrshort{seviri} is shown in fig.~\ref{fig:seviri_obs_example} for 15:00:00~\acrshort{utc} on 1\textsuperscript{st} June 2016. 
 A visible composite (fig.~\ref{fig:seviri_obs_example}\,a) is constructed using the 1.64\,\unit{\mu m} and 0.81\,\unit{\mu m} near-infrared and 0.64\,\unit{\mu m} visible channels for the \acrfull{rgb} channels respectively. 
-In this composite, ice clouds -- which appear cyan -- can be seen over central Africa and the southern Atlantic. fig.~\ref{fig:seviri_obs_example}\,b shows the 10.8\,\unit{\mu m} brightness temperature for the same scene, showing the coldest temperatures for the high ice clouds over central Africa. 
+In this composite, ice clouds (which appear cyan) can be seen over central Africa and the southern Atlantic. fig.~\ref{fig:seviri_obs_example}\,b shows the 10.8\,\unit{\mu m} brightness temperature for the same scene, showing the coldest temperatures for the high ice clouds over central Africa. 
 Two combinations of channels are used for the detection of anvil clouds. 
 The \acrfull{wvd}, shown in fig.~\ref{fig:seviri_obs_example}\,c, consists of the 6.3\,\unit{\mu m} \acrshort{bt} minus the 7.4\,\unit{\mu m} \acrshort{bt}. 
 In clear skies the \acrshort{wvd} is negative, with values around --\,20 to --\,15 K, due to the higher, and thus colder, emission height of the 6.3\,\unit{\mu m} channel. 
@@ -262,7 +262,7 @@ As a result, we found that the detection of thin anvil is unreliable using this 
 \end{figure*}
 
 
-Retrieved cloud properties -- including optical thickness, effective radius, liquid/ice water path, \acrshort{ctt} and height -- are provided by the \acrfull{cc4cl} algorithm \citep{sus_community_2018, mcgarragh_community_2018}. 
+Retrieved cloud properties, including optical thickness, effective radius, liquid/ice water path, \acrshort{ctt} and height, are provided by the \acrfull{cc4cl} algorithm \citep{sus_community_2018, mcgarragh_community_2018}. 
 These properties are all retrieved at the same resolution as the input \acrshort{seviri} data. Broadband fluxes are derived using the BUGSRad radiative transfer model \citep{stephens_parameterization_2001} using input cloud properties from the \acrshort{cc4cl} retrieval and vertical temperature, moisture and trace gas profiles from ERA-5 \citep{hersbach_era5_2020}. 
 The BUGSRad model provides \acrshort{toa} and \acrlong{boa} \acrshort{lw} and \acrshort{sw} radiative fluxes for both all-sky and clear-sky conditions. An example of these derived fluxes is shown in fig.~\ref{fig:seviri_flux_example}. 
 Figure~\ref{fig:seviri_flux_example}\,a shows net \acrshort{toa} fluxes, with a net warming during the daytime on the Western side of the image, and a net cooling at night-time on the Eastern side. 
