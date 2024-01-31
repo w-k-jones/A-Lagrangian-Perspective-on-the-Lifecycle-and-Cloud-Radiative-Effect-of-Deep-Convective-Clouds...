@@ -1,0 +1,26 @@
+name: lagrangian_cre_figures
+channels:
+  - conda-forge
+dependencies:
+  - numpy
+  - scipy
+  - scikit-image
+  - scikit-learn
+  - pandas
+  - xarray
+  - opencv
+  - pyproj
+  - cf_xarray
+  - python-dateutil
+  - satpy
+  - pyspectral
+  - matplotlib
+  - cartopy
+  - jupyter
+  - notebook
+  - libnetcdf<=4.9.1
+  - netcdf4
+  - cython
+  - pip
+  - pip:
+     - "--editable=git+https://github.com/w-k-jones/tobac-flow.git@RC_v1.8.2#egg=tobac_flow"
