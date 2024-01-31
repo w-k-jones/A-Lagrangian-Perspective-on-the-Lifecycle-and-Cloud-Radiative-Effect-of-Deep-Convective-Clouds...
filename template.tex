@@ -316,15 +316,26 @@ On the other hand, the \acrshort{mcs} tracking algorithms perform worse for smal
 To approach the challenge of tracking both isolated \acrshort{dcc}s and large, clustered systems, we address the role of cloud motion in the scaling problem. 
 tobac-flow first estimates the motion of \acrshort{dcc}s at each pixel using an optical-flow algorithm. 
 Then, using these estimated motion vectors, we construct a semi-Lagrangian framework in which to perform the detection and tracking. 
+This approach addresses two issues found in traditional cloud tracking approaches.
+First, estimating a motion vector for each pixel allows complex motions (including divergence, rotation, splitting and merging) to be compensated for, rather than just the bulk motion found using the centroid tracking methods.
+Second, by estimating the cloud motion \textit{a priori}, we are able to use this information within the detection step of the algorithm and therefore allowing observations of changes in cloud properties to be separated from those observed due to cloud motion.
 This framework removes the problem of \acrshort{dcc} motion, allowing us to track both isolated and large \acrshort{dcc}s at the same time.
 
-We detect growing convective cores where we observe regions of rapid cooling in the 10.8\,\unit{\mu m} \acrshort{bt} channel and the \acrshort{wvd}; the difference between the 6.2\,\unit{\mu m} and 7.3\,\unit{\mu m} channels. 
-Using both differences allows us to detect growing \acrshort{dcc}s close to the surface and continue tracking them into the upper troposphere. 
+Three channels and channel combinations from \acrshort{seviri} are used for the detection algorithm: the 10.8\,\unit{\mu m} \acrshort{bt} channel; the \acrshort{wvd} (the difference between the 6.2\,\unit{\mu m} and 7.3\,\unit{\mu m} channels), and the \acrshort{swd} (the difference between the 10.8\,\unit{\mu m} and 12.0\,\unit{\mu m} channels).
+Estimation of cloud motion vectors using optical flow in performed using the 10.8\,\unit{\mu m} \acrshort{bt} channel.
+Detection of cores utilises the 10.8\,\unit{\mu m} \acrshort{bt} channel and the \acrshort{wvd}, and detection of anvils uses \acrshort{wvd} and \acrshort{swd}.
+
+We detect growing convective cores where we observe regions of rapid cooling in the 10.8\,\unit{\mu m} \acrshort{bt} channel of greater than 0.5\,\unit{Ks\textsuperscript{-1}} and the \acrshort{wvd} of greater than 0.25\,\unit{Ks\textsuperscript{-1}}.
+In both cases
+\acrshort{dcc}s close to the surface and continue tracking them into the upper troposphere. 
 We classify a core as a region of cooling temperature that has existed for at least 15 minutes and has cooled by at least 8\,\unit{K} in a 15-minute period. 
-This threshold provides a strong indicator of intense convective activity \citep{roberts_nowcasting_2003}, and so provides an accurate detection of growing \acrshort{dcc}s. 
+This threshold provides a strong indicator of intense convective activity \citep{roberts_nowcasting_2003}, and so provides an accurate detection of growing \acrshort{dcc}s.
+
 Starting from these convective cores, we then detect the surrounding anvil cloud using the \acrshort{wvd} field \citep{muller_role_2018, muller_novel_2019} and continue to detect the anvil until its dissipation, even after the core is no longer visible. 
 Each anvil cloud can be associated with multiple cores, allowing us to identify cases of clustered convection. 
 As we detect the cores based on cloud-top cooling, however, we can only detect the cores themselves during the growing phase, and cannot detect cores that occur underneath cold, high, anvil clouds. 
+
+
 Due to the lack of sensitivity of the \acrshort{seviri} \acrshort{swd} to thin ice clouds, we only detect and track the thick portion of the anvil in this article.
 
 An example of the cores and anvils detected by the tobac-flow algorithm is shown in fig.~\ref{fig:seviri_detection}, at 3-hour intervals. In fig.~\ref{fig:seviri_detection}\,a, we see a large number of developing cores over central Africa. 
